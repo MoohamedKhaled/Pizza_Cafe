@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.3-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Label layoutX="246.0" layoutY="8.0" text="PIZZA CAFE">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Label>
+    <Label layoutX="30.0" layoutY="50.0" text="Customer Name" />
+    <Label layoutX="30.0" layoutY="100.0" text="Pizza rate" />
+    <Label layoutX="30.0" layoutY="150.0" text="Quantity" />
+    <Label layoutX="25.0" layoutY="200.0" prefHeight="18.0" prefWidth="108.0" text="Cost of Toppings" />
+    <Label layoutX="32.0" layoutY="249.0" text="Amount" />
+    <TextField fx:id="nameTxt" layoutX="133.0" layoutY="45.0" />
+    <TextField fx:id="rateTxt" editable="false" layoutX="133.0" layoutY="95.0" />
+    <TextField fx:id="quantityTxt" layoutX="133.0" layoutY="145.0" />
+    <TextField fx:id="toppingsTxt" editable="false" layoutX="133.0" layoutY="195.0" prefHeight="28.0" prefWidth="162.0" />
+    <TextField fx:id="amountTxt" editable="false" layoutX="133.0" layoutY="236.0" />
+    <Button fx:id="calculateBut" layoutX="170.0" layoutY="350.0" mnemonicParsing="false" onAction="#clickCalculateBut" text="CALCULATE" />
+    <Button fx:id="clearBut" layoutX="354.0" layoutY="350.0" mnemonicParsing="false" onAction="#clickClearBut" text="CLEAR" />
+    <Label layoutX="467.0" layoutY="36.0" text="select pizza type" />
+    <Pane layoutX="454.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="94.0" prefWidth="126.0" style="-fx-border-color: #000000;">
+        <RadioButton fx:id="regularRB" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" text="Regular">
+            <toggleGroup>
+                <ToggleGroup fx:id="pizza" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="panRb" layoutX="13.0" layoutY="47.0" mnemonicParsing="false" text="Pan" toggleGroup="$pizza" />
+    </Pane>
+    <Pane layoutX="454.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="126.0" style="-fx-border-color: #000000;">
+        <CheckBox fx:id="capsicumCB" layoutX="14.0" layoutY="45.0" mnemonicParsing="false" text="capsicum" />
+        <CheckBox fx:id="pepperoniCB" layoutX="11.0" layoutY="74.0" mnemonicParsing="false" text="pepperoni" />
+        <CheckBox fx:id="cheeseCB" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="cheese" />
+    </Pane>
+    <Label layoutX="469.0" layoutY="164.0" text="Select Toppings" />
+</AnchorPane>
